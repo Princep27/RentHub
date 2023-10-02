@@ -52,7 +52,7 @@
 .headerMid input{
     background-color: inherit;
     padding: 0px 15px;
-    height: 35px;
+    height: 28px;
     font-size: 16px;  
     color: gray(219, 219, 219);  
     letter-spacing: 1px;
@@ -70,7 +70,7 @@
 }
 
 .iconSearch{
-    font-size: 28px; 
+    font-size: 24px; 
     position: absolute;  
     right: 10px;
     cursor: pointer;
@@ -103,13 +103,17 @@
 /* -------------------------------- Sub header -------------------------------------*/
 .subHeader{
 overflow: hidden;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .subHeader ul{
     padding-bottom: 6px;
-    width: 100%;
+    width: 80vw;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     list-style: none;
     overflow-x: auto;
 }
@@ -206,24 +210,24 @@ overflow: hidden;
     }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width:  740px){
     .subHeader ul li{
         padding: 0px 10px;
         font-size: 14px;
     }
     .headerHamburger{
-        left:6px;
+        left:5px;
+        font-size: 17px;
     }
     .loginIcon{
         font-size: 14px;
     }
-}
-
-@media only screen and (max-width: 430px){
-    .subHeader ul{
-        justify-content: left;
-        overflow-x: auto;
+    .headerMid input{
+        height: 25px;
     }
+    .iconSearch{
+        font-size: 22px; 
+    } 
 }
 
 @media only screen and (max-width: 315px){
@@ -239,13 +243,15 @@ overflow: hidden;
         font-size: 15px;
     }
     .loginIcon{
-        font-size: 12px;
+        font-size: 10px;
         margin-right: 10px;
+        padding: 4px 5px;
     }
     .headerMid input{
-        height: 26  px;
+        height: 22px;
         width: 100%;
         margin-left: 10px;
+        font-size: 14px;
     } 
     .iconSearch{
         font-size: 22px; 

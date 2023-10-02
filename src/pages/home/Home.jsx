@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
         <Header/>
-        <div className='wrapper'>
-          <div className='heading'>Heading</div>
+        <div className='homeWrapper'>
+          <div className='heading'>Recent</div>
           <div className='productWrapperTop'>
               <Products/>
           </div>

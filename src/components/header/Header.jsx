@@ -34,11 +34,16 @@ export default function Header() {
       </div>
 
       <div className='subHeader'>
-          <ul>
+          <ul className='optionsSubHeader'>
             <li>Book</li> 
             <li>Car</li>
+            <li>Bike</li>
+            <li>Tablet</li>
             <li>Room</li>
             <li>Camera</li>
+            <li>Mobile</li>
+            <li>Laptop</li>
+            <li>PC</li>
             <li>HomeAppliances</li>  
           </ul>
       </div>
