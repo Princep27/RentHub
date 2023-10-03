@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         
 
-        <div className='filterSideBar' style={{right:isOpen?'0vw':'-100vw'}}>
+        <div className='filterSideBar' style={isOpen?{visibility:'visible',right:'0vw'}:{visibility:'hidden',right:'-100vw'}}>
              <div className='homeFilterInputFieldWrapper'>
               <ImCross className='filterSideBarCross' onClick={handleFilterButton}/>
              </div>
