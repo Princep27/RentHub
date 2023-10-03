@@ -21,7 +21,7 @@ export default function Header() {
           <p>RentHub</p>    
         </div>
         <div className='headerMid'>
-          <input className='headerSearch' type="text">
+          <input className='headerSearch' placeholder='Search Product' type="text">
           </input>
           <CiSearch className='iconSearch' />
         </div>
