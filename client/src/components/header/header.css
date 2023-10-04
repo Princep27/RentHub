@@ -1,0 +1,287 @@
+.headerWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #D4E2D4;
+    color: black; 
+    font-family: 'Varela Round', sans-serif;
+    user-select: none;
+}
+
+/* -------------------------------------- Header -----------------------------------------*/
+
+.header{
+    display: flex;
+    height: 57px;
+    align-items: center;
+    width: 100%;
+}
+
+.headerLeft{
+    flex: 1;
+    display: flex;  
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.headerHamburger{
+    position: absolute;
+    left: 10px; 
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.headerLeft p{
+    font-size: 24px;
+    letter-spacing: 2px;
+    cursor: pointer;    
+}
+
+.headerMid{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.headerMid input{
+    background-color: inherit;
+    padding: 0px 15px;
+    height: 28px;
+    font-size: 16px;  
+    color: gray(219, 219, 219);  
+    letter-spacing: 1px;
+}
+
+.header input:focus{
+    outline: none;
+}
+
+.header input::placeholder{
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding-left: 8px;
+    color: rgb(160, 155, 155);
+}
+
+.headerSearch{
+    height: 37px;
+    width: 100%  ;
+    border-radius: 20px;
+    border: 2px solid grey;
+}
+
+.iconSearch{
+    font-size: 24px; 
+    position: absolute;  
+    right: 10px;
+    cursor: pointer;
+}
+
+.headerRight{
+    flex: 1;
+    display: flex;  
+    align-items: center;
+    padding: 5px;
+    justify-content: right;
+}
+
+.loginIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    padding: 4px 13px;
+    border-radius: 100px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.loginIcon:hover{
+    background-color: rgb(207, 215, 207);
+}
+
+/* -------------------------------- Sub header -------------------------------------*/
+.subHeader{
+overflow: hidden;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.subHeader ul{
+    padding-bottom: 6px;
+    width: 80vw;
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    overflow-x: auto;
+}
+
+.subHeader ul::-webkit-scrollbar{
+    display: none;
+}
+
+.subHeader ul li{
+    padding: 0px 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.subHeader ul li:hover{
+    color:rgb(128, 125, 125);
+}
+
+
+/* --------------------------------- Side Bar -----------------------------------*/
+
+.sideBar{
+    position: fixed;
+    letter-spacing: 2px;
+    width: 220px;
+    height:100vh;
+    left: 0px;
+    top: 0px;
+    background-color:#9E9FA5;
+    transition: left 500ms;
+    z-index: 1;
+}
+
+.sideBar ul{
+    list-style-type: none;
+    overflow: hidden; 
+    padding-top: 80px;
+    padding-left: 20px;
+}
+
+.sideBar ul li{
+    padding: 10px 30px;    
+    letter-spacing: 2px;
+    cursor: pointer;  
+}
+
+.sideBar ul li:hover{
+    color: rgb(69, 68, 68); 
+}
+
+.sideBarCross{
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/*--------------media quries ----------------------------*/
+
+@media only screen and (max-width: 1024px){
+    .headerLeft p{
+      padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .headerLeft p{
+      font-size: 20px;
+    }
+    .headerMid input{
+        height: 30px;
+        width: 100%;
+        margin-left: 10px;
+    } 
+    .iconSearch{
+        font-size: 24px; 
+        position: absolute;  
+        right: 10px;
+        cursor: pointer;
+    }   
+    .headerHamburger{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .subHeader ul li{
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+    .headerHamburger{
+        left:6px;
+    }
+}
+
+@media only screen and (max-width:  740px){
+    .subHeader ul li{
+        padding: 0px 10px;
+        font-size: 14px;
+    }
+    .headerHamburger{
+        left:5px;
+        font-size: 17px;
+    }
+    .loginIcon{
+        font-size: 14px;
+    }
+    .headerMid input{
+        height: 25px;
+    }
+    .iconSearch{
+        font-size: 22px; 
+    } 
+    .header input::placeholder{
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding-left: 2px;
+    }
+}
+
+
+
+@media only screen and (max-width: 315px){
+    .headerLeft p{
+        font-size: 16px;
+      }
+    .subHeader ul li{
+        padding: 0px 10px;
+        font-size: 12px;
+    }
+    .headerHamburger{
+        left:3px;
+        font-size: 15px;
+    }
+    .loginIcon{
+        font-size: 10px;
+        margin-right: 10px;
+        padding: 4px 5px;
+    }
+    .headerMid input{
+        height: 22px;
+        width: 100%;
+        margin-left: 10px;
+        font-size: 14px;
+    } 
+    .iconSearch{
+        font-size: 22px; 
+        position: absolute;  
+        right: 7px;
+        cursor: pointer;
+    } 
+}
+
+
+/* font-family: 'Inclusive Sans', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Varela Round', sans-serif; */
