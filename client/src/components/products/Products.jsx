@@ -2,24 +2,10 @@ import React from 'react'
 import Product from '../product/Product'
 import "./products.css";
 
-export default function Products() {
+export default function Products({prod}) {
   return (
     <div className='products'>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
+        {prod && prod.map((p,index)=><Product key={index} data={p}/>)}
     </div>
   )
 }
