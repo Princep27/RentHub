@@ -11,7 +11,7 @@ export default function Product({data}) {
         </div>
         <div className='productDetailWrapper'>
           <div className='productDetailPrice'>₹ {data.rent.price}</div>
-          <div className='productDetailAbout'>{data.title}, 4 Year old</div>
+          <div className='productDetailAbout'>{data.title}</div>
           <div className='productDeatilLocationAndDateWarapper'>
               <div className='productDetailLocation'>{data.location.city} {data.location.state}</div>
               <div className='productDetailDate'>{Math.floor((new Date() - new Date(data.updatedAt)) / (1000 * 60 * 60 * 24))} day ago</div>

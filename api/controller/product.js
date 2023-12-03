@@ -43,7 +43,7 @@ export const uploadNewProduct = async (req,res,next)=>{
         uploadedResults.forEach(element => {
             urlArray.push(element.url);
         });
-        console.log(urlArray);
+        //console.log(urlArray);
 
         //posting new Product data in mongoDB
         const {categories,title,description,rentPrice,rentDuration,locationState,locationCity} = req.body;
@@ -69,10 +69,11 @@ export const uploadNewProduct = async (req,res,next)=>{
             const userProduct = await UserProducts.findByIdAndUpdate(
                 req.user._id,{$push: {productIds : newProductId}},{new : true}
             )
-            res.send(userProduct);
-            console.log(userProduct);
+            //res.send(userProduct);
+            res.json({"message" : "Product Added Sucessfull","success":true});
+            //console.log(userProduct);
         }catch(e){
-            res.send(e);
+            res.send({"message" : "Something went Wrong","data" : e,"success":false});
         }
 
     }catch(e){
@@ -110,9 +111,9 @@ export const deletePostDetail = async (req, res, next) => {
             console(e);
         }
         
-        res.send('Images deleted successfully.');
+        res.json({'message':'Product deleted successfully','success':true});
     } catch (e) {
-        res.status(500).send(e);
+        res.status(500).send({'message' : 'Permission Denied'});
     }
 }
 

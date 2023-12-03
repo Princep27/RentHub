@@ -52,7 +52,7 @@ export default function Header() {
     <div className='headerWrapper'>
       <div className='header'>
         <Stack direction="horizontal" className='px-3 pt-2' gap={3} style={{flex:'1'}}>
-          <GiHamburgerMenu className='h3' onClick={handleClick}/>
+          <GiHamburgerMenu className='h3' onClick={handleClick} style={{"cursor":"pointer"}}/>
           <div className="h2">
             RentHub    
           </div>

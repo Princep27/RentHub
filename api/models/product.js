@@ -16,7 +16,7 @@ const proudctSchema = mongoose.Schema({
     description : {
         type: String,
     },
-    rent : {
+    rent : {    
         price : {
             type : Number,
             require : true
