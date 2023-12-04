@@ -91,6 +91,7 @@ export default function Home() {
   }
 
   function handleApplyButton(e){
+    setIsOpen(false);
     setProductFilter((prevProductFilter)=>({
       ...prevProductFilter,
       city : selectedCity.name,
