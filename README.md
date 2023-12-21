@@ -4,7 +4,9 @@
 RentHub is a website which provide a platform to users to Lend and Rent Products.
 
 Frontend : ReactJS
+
 Backend : Nodejs, ExpressJS
+
 DataBase : MongoDB (text), Cloudinary(Image)
 
 # Start
